@@ -35,5 +35,6 @@ int main(){
   int tamanho_array_notas = 6;
   int *quantidade_notas = calcula_quant_notas(troco, notas, tamanho_array_notas);
   printa_array(quantidade_notas, notas, tamanho_array_notas);
+  free(quantidade_notas);
   return 0;
 }
