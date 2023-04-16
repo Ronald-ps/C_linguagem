@@ -12,6 +12,10 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
   *returnSize = 2;
   int last_values[numsSize];
   int* indexes = malloc(*returnSize * sizeof(int));
+  if (indexes == NULL){
+    free(indexes);
+    return NULL;
+  }
   for (int i = 0; i < numsSize; i++)
   {
     if (i == 0){
